@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BeatDetector : MonoBehaviour
 {
+    public bool isHit;
+
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Note"))
@@ -11,20 +13,24 @@ public class BeatDetector : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 Debug.Log("Hit");
+                isHit = true;
+            }
+            else
+            {
+                Debug.Log("Miss");
+                isHit = false;
             }
          
         }
     }
 
-   
-    /*
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Note"))
         {
-            Debug.Log("left");
+            isHit = false;
         }
     }
-    */
+    
 
 }
