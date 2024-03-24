@@ -54,19 +54,25 @@ public class NPCDialogue : MonoBehaviour
 
     void TalkToNPC()
     {
-        if(Input.GetKeyDown(KeyCode.F) && canTalk)
+        if(canTalk)
         {
-            if (dialoguePanel.activeInHierarchy)
+            if(Input.GetKeyDown(KeyCode.E))
             {
-                ResetText();
-                interactText.SetActive(false);
+                
+                canTalk = false;
+                if (dialoguePanel.activeInHierarchy)
+                {
+                    ResetText();
+                    interactText.SetActive(false);     
+                }
+                else
+                {
+                    dialoguePanel.SetActive(true);
+                    interactText.SetActive(false);
+                    StartCoroutine(Typing());
+                }
             }
-            else
-            {
-                dialoguePanel.SetActive(true);
-                interactText.SetActive(false);
-                StartCoroutine(Typing());
-            }
+ 
         }
     
     }
@@ -76,6 +82,7 @@ public class NPCDialogue : MonoBehaviour
         npcText.text = "";
         index = 0;
         dialoguePanel.SetActive(false);
+        
     }
 
     IEnumerator Typing()

@@ -5,25 +5,27 @@ using UnityEngine;
 public class BeatDetector : MonoBehaviour
 {
     public bool isHit;
+    public AudioSource cameraShutter;
 
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Note"))
         {
+      
             if (Input.GetKeyDown(KeyCode.Q))
             {
-                Debug.Log("Hit");
+                //Debug.Log("Hit");
                 isHit = true;
+                cameraShutter.Play();
             }
             else
             {
-                Debug.Log("Miss");
                 isHit = false;
-            }
+            }     
          
         }
     }
-
+  
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Note"))
