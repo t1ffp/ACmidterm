@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -948,6 +948,7 @@ GameObject:
   - component: {fileID: 385508384}
   - component: {fileID: 385508383}
   - component: {fileID: 385508382}
+  - component: {fileID: 385508385}
   m_Layer: 5
   m_Name: HItVFX
   m_TagString: Untagged
@@ -1008,7 +1009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1033,6 +1034,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 385508380}
   m_CullTransparentMesh: 1
+--- !u!114 &385508385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385508380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9ec470cc3ca448d6a79c9e8b4a6cc06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitAnim: {fileID: 385508382}
+  hitVFX: {fileID: 385508380}
+  beatDetector: {fileID: 336122553}
 --- !u!1 &464187553
 GameObject:
   m_ObjectHideFlags: 0
@@ -2683,13 +2699,14 @@ GameObject:
   - component: {fileID: 1739576610}
   - component: {fileID: 1739576609}
   - component: {fileID: 1739576608}
+  - component: {fileID: 1739576611}
   m_Layer: 5
   m_Name: HItVFX (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1739576607
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2719,7 +2736,7 @@ Animator:
   m_GameObject: {fileID: 1739576606}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3823e29f400bb45f2a860b6bfb5a9d8a, type: 2}
+  m_Controller: {fileID: 22100000, guid: 5be7a4becc5c50c48a3d8d80d3603042, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2743,7 +2760,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2768,6 +2785,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1739576606}
   m_CullTransparentMesh: 1
+--- !u!114 &1739576611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739576606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9ec470cc3ca448d6a79c9e8b4a6cc06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitAnim: {fileID: 1739576608}
+  hitVFX: {fileID: 1739576606}
+  beatDetector: {fileID: 336122553}
 --- !u!1 &1747802972
 GameObject:
   m_ObjectHideFlags: 0
@@ -2780,13 +2812,14 @@ GameObject:
   - component: {fileID: 1747802976}
   - component: {fileID: 1747802975}
   - component: {fileID: 1747802974}
+  - component: {fileID: 1747802977}
   m_Layer: 5
   m_Name: HItVFX (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1747802973
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2840,7 +2873,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2865,6 +2898,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1747802972}
   m_CullTransparentMesh: 1
+--- !u!114 &1747802977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747802972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9ec470cc3ca448d6a79c9e8b4a6cc06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitAnim: {fileID: 1747802974}
+  hitVFX: {fileID: 1747802972}
+  beatDetector: {fileID: 336122553}
 --- !u!1 &1802410657
 GameObject:
   m_ObjectHideFlags: 0
@@ -3110,13 +3158,14 @@ GameObject:
   - component: {fileID: 2080422583}
   - component: {fileID: 2080422582}
   - component: {fileID: 2080422584}
+  - component: {fileID: 2080422585}
   m_Layer: 5
   m_Name: HItVFX (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2080422580
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3149,7 +3198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3184,7 +3233,7 @@ Animator:
   m_GameObject: {fileID: 2080422579}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3823e29f400bb45f2a860b6bfb5a9d8a, type: 2}
+  m_Controller: {fileID: 22100000, guid: 5be7a4becc5c50c48a3d8d80d3603042, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3195,6 +3244,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2080422585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080422579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9ec470cc3ca448d6a79c9e8b4a6cc06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitAnim: {fileID: 2080422584}
+  hitVFX: {fileID: 2080422579}
+  beatDetector: {fileID: 336122553}
 --- !u!1 &2094267838
 GameObject:
   m_ObjectHideFlags: 0

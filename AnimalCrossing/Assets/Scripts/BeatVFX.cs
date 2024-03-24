@@ -6,27 +6,27 @@ public class BeatVFX : MonoBehaviour
 {
     public Animator hitAnim;
     public GameObject hitVFX;
-    public GameObject beatDetector;
+    public BeatDetector beatDetector;
+   
 
     // Start is called before the first frame update
     void Start()
     {
         hitAnim = GetComponent<Animator>();
-        hitVFX.SetActive(false);
+       
+     
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (beatDetector.GetComponent<BeatDetector>().isHit)
+        if (beatDetector.isHit )
         {
-            hitVFX.SetActive(true);
-            //hitAnim.SetBool("isPlaying", true);
+            hitAnim.SetBool("isPlaying", true);
         }
         else
         {
-            hitVFX.SetActive(false);
-            //hitAnim.SetBool("isPlaying", false);
+            hitAnim.SetBool("isPlaying", false);
         }
+ 
     }
 }
