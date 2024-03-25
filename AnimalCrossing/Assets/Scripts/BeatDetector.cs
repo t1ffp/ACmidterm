@@ -20,7 +20,7 @@ public class BeatDetector : MonoBehaviour
         if (other.CompareTag("Note"))
         {
       
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.A))
             {
                 //Debug.Log("Hit");
                 isHit = true;

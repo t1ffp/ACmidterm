@@ -26,6 +26,9 @@ public class Transition : MonoBehaviour
     public float startTimer;
     public TextMeshProUGUI starttimerText;
 
+    public GameObject currentFruit;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,11 +39,12 @@ public class Transition : MonoBehaviour
 
     private void Update()
     {
-        if(canPlay && !isPlaying && Input.GetKeyDown(KeyCode.Space))
+        if(canPlay && !isPlaying && Input.GetKeyDown(KeyCode.A))
         {
             blackScreen.SetActive(true);
             gameScreen.SetActive(true);
             instructionText.SetActive(true);
+            currentFruit.SetActive(true);
             ResetTimers();
             timerOn = true;
         }
@@ -116,6 +120,7 @@ public class Transition : MonoBehaviour
                 gametimerText.enabled = false;
                 blackScreen.SetActive(false);
                 gameScreen.SetActive(false);
+                currentFruit.SetActive(false);
             }
      
         }

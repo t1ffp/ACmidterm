@@ -27,7 +27,7 @@ public class NPCDialogue : MonoBehaviour
     {
         TalkToNPC();
 
-        if(npcText.text == npcDialogue[index] && Input.GetKeyDown(KeyCode.Space))
+        if(npcText.text == npcDialogue[index] && Input.GetKeyDown(KeyCode.A))
         {
             NextLine();
         }
@@ -56,7 +56,7 @@ public class NPCDialogue : MonoBehaviour
     {
         if(canTalk)
         {
-            if(Input.GetKeyDown(KeyCode.Space))
+            if(Input.GetKeyDown(KeyCode.A))
             {
                 
                 canTalk = false;
