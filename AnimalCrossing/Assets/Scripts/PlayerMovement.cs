@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
 
     public float groundDrag;
 
+    public Animator playerAnim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,12 +26,23 @@ public class PlayerMovement : MonoBehaviour
         rb.freezeRotation = true;
 
         rb.drag = groundDrag;
+
+        playerAnim = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
         MyInput();
+
+        if(rb.velocity.magnitude > 0)
+        {
+            playerAnim.SetBool("isWalking", true);
+        }
+        else
+        {
+            playerAnim.SetBool("isWalking", false);
+        }
     }
 
     private void FixedUpdate()
