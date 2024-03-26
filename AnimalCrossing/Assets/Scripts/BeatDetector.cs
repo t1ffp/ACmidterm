@@ -8,13 +8,20 @@ public class BeatDetector : MonoBehaviour
     public bool isHit;
     public AudioSource cameraShutter;
 
+    public FollowCount followers;
+
+    /*
     public int followCount = 0;
     public TextMeshProUGUI followers;
+    */
+
+
 
     private void Update()
     {
-        followers.text = (followCount).ToString("0");
+        //followers.text = (followCount).ToString("0");
     }
+
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Note"))
@@ -25,7 +32,8 @@ public class BeatDetector : MonoBehaviour
                 //Debug.Log("Hit");
                 isHit = true;
                 cameraShutter.Play();
-                followCount += 50;
+                //followCount += 50;
+                followers.followCount += 50;
             }
             else
             {
