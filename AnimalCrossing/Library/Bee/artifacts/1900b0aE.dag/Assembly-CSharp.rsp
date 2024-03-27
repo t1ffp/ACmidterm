@@ -363,6 +363,7 @@
 "Assets/Scripts/BeatVFX.cs"
 "Assets/Scripts/Conductor.cs"
 "Assets/Scripts/FollowCount.cs"
+"Assets/Scripts/NoteSpawner.cs"
 "Assets/Scripts/NPCDialogue.cs"
 "Assets/Scripts/PlayerMovement.cs"
 "Assets/Scripts/SyncAnimation.cs"
